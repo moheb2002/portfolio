@@ -248,7 +248,7 @@ https://www.linkedin.com/in/moheb2002
 
 ### Email
 
-mohebadel13@gmail.com
+mailto:mohebadel13@gmail.com
 ---
 
 ## ⭐ Future Enhancements
