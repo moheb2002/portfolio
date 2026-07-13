@@ -1,64 +1,273 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import { motion } from "framer-motion";
+import { GitBranch, MessageCircle, Download, Mail } from "lucide-react";
+import { TypeAnimation } from "react-type-animation";
+
+const certifications = [
+  "AB-100 Agentic AI Business Solutions Architect",
+  "AI-103 Azure AI & Agentic Developer",
+  "AI-102 Azure AI Engineer Associate",
+  "AB-731 AI Transformation Leader",
+  "AB-730 AI Business Professional",
+  "AB-900 Copilot Administration Fundamentals",
+  "AI-900 Azure AI Fundamentals",
+  "AZ-900 Azure Fundamentals",
+];
+
+const projects = [
+  {
+    title: "AI Avatar Presenter",
+    description:
+      "Create AI avatar videos from PowerPoint presentations using Azure AI Speech and Avatar APIs.",
+    stack: ["Azure AI", "FastAPI", "PowerPoint"],
+  },
+  {
+    title: "AI Speech Assistant",
+    description:
+      "Convert text into natural sounding speech using Azure Speech Services.",
+    stack: ["Python", "Azure Speech", "FastAPI"],
+  },
+  {
+    title: "Copilot & Agentic AI Solutions",
+    description:
+      "Business solutions powered by Copilot, RAG, Prompt Flow and Agentic AI.",
+    stack: ["Copilot", "RAG", "Azure OpenAI"],
+  },
+];
+
+const fadeUp = {
+  hidden: {
+    opacity: 0,
+    y: 50,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+    },
+  },
+};
+
+export default function Portfolio() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
+      {/* Background Blur Effects */}
+
+      <div className="absolute top-0 left-0 h-150 w-150 rounded-full bg-cyan-500/20 blur-[150px]" />
+
+      <div className="absolute bottom-0 right-0 h-150 w-150 rounded-full bg-blue-600/20 blur-[150px]" />
+
+      <main className="relative z-10">
+        {/* HERO */}
+
+        <section className="max-w-7xl mx-auto px-6 py-28">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div initial="hidden" animate="visible" variants={fadeUp}>
+              <span className="px-4 py-2 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                Microsoft Business Program Manager Intern
+              </span>
+
+              <h1 className="text-6xl font-extrabold mt-6">Moheb Adel</h1>
+
+              <div className="text-3xl font-semibold text-cyan-400 mt-5">
+                <TypeAnimation
+                  sequence={[
+                    "AI Consultant",
+                    2000,
+                    "Microsoft Copilot Specialist",
+                    2000,
+                    "Agentic AI Architect",
+                    2000,
+                  ]}
+                  repeat={Infinity}
+                />
+              </div>
+
+              <p className="text-slate-300 text-lg mt-8 leading-relaxed max-w-xl">
+                Passionate about Generative AI, Agentic AI, Microsoft Copilot,
+                Azure AI and enterprise transformation. Building intelligent
+                solutions that bridge business strategy with AI innovation.
+              </p>
+
+              <div className="flex flex-wrap gap-4 mt-10">
+                <a
+                  href="https://github.com/moheb2002"
+                  target="_blank"
+                  className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-cyan-500 hover:bg-cyan-400 transition"
+                >
+                  <GitBranch size={18} />
+                  GitHub
+                </a>
+
+                <a
+                  href="/Moheb_Adel_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-6 py-3 rounded-2xl border border-white/20 hover:border-cyan-400"
+                >
+                  <Download size={18} />
+                  Resume
+                </a>
+              </div>
+            </motion.div>
+
+            {/* RIGHT CARD */}
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+              }}
+              transition={{ duration: 1 }}
+              className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md p-10"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
+              <h2 className="text-2xl font-bold">Quick Overview</h2>
+
+              <div className="grid grid-cols-2 gap-5 mt-8">
+                <div className="rounded-2xl bg-slate-900/50 p-4">
+                  <h3 className="text-cyan-400 text-3xl font-bold">7+</h3>
+                  <p>Microsoft Certifications</p>
+                </div>
+
+                <div className="rounded-2xl bg-slate-900/50 p-4">
+                  <h3 className="text-cyan-400 text-3xl font-bold">3+</h3>
+                  <p>AI Projects</p>
+                </div>
+
+                <div className="rounded-2xl bg-slate-900/50 p-4">
+                  <h3 className="text-cyan-400 text-3xl font-bold">Azure</h3>
+                  <p>AI Solutions</p>
+                </div>
+
+                <div className="rounded-2xl bg-slate-900/50 p-4">
+                  <h3 className="text-cyan-400 text-3xl font-bold">Copilot</h3>
+                  <p>Specialist</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* CERTIFICATIONS */}
+
+        <section className="max-w-7xl mx-auto px-6 py-20">
+          <motion.h2
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            className="text-4xl font-bold mb-10"
+          >
+            Certifications
+          </motion.h2>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {certifications.map(cert => (
+              <motion.div
+                key={cert}
+                whileHover={{
+                  scale: 1.05,
+                  y: -10,
+                }}
+                className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md p-6"
+              >
+                🏆 {cert}
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
+        {/* PROJECTS */}
+
+        <section className="max-w-7xl mx-auto px-6 py-20">
+          <h2 className="text-4xl font-bold mb-10">Featured Projects</h2>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            {projects.map(project => (
+              <motion.div
+                key={project.title}
+                whileHover={{
+                  scale: 1.05,
+                  y: -10,
+                }}
+                className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md p-6"
+              >
+                <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
+
+                <p className="text-slate-300">{project.description}</p>
+
+                <div className="flex flex-wrap gap-2 mt-5">
+                  {project.stack.map(tech => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 text-sm rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
+        {/* SKILLS */}
+
+        <section className="max-w-7xl mx-auto px-6 py-20">
+          <h2 className="text-4xl font-bold mb-10">Skills</h2>
+
+          <div className="flex flex-wrap gap-3">
+            {[
+              "Azure AI",
+              "Azure OpenAI",
+              "Microsoft Copilot",
+              "Agentic AI",
+              "RAG",
+              "Prompt Flow",
+              "FastAPI",
+              "Python",
+              "Node.js",
+              "GitHub",
+            ].map(skill => (
+              <motion.span
+                key={skill}
+                whileHover={{ scale: 1.1 }}
+                className="px-5 py-3 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20"
+              >
+                {skill}
+              </motion.span>
+            ))}
+          </div>
+        </section>
+
+        {/* CONTACT */}
+
+        <section className="max-w-7xl mx-auto px-6 py-20 text-center">
+          <h2 className="text-4xl font-bold mb-6">Let&apos;s Connect</h2>
+
+          <div className="flex justify-center gap-4">
             <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="https://www.linkedin.com/in/moheb2002/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-cyan-500 hover:bg-cyan-400 transition"
             >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+              <MessageCircle size={18} />
+              LinkedIn
+            </a>
+
+            <a
+              href="mailto:mohebadel13@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-cyan-500 hover:bg-cyan-400 transition"
+            >
+              <Mail size={18} />
+              Mail
+            </a>
+          </div>
+        </section>
       </main>
     </div>
   );
