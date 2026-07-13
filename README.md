@@ -1,37 +1,274 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Moheb Adel Portfolio
 
-## Getting Started
+A modern, responsive, and animated personal portfolio built with **Next.js 15**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**.
 
-First, run the development server:
+Designed to showcase my journey as a Microsoft Business Program Manager Intern, AI Consultant, and Agentic AI Specialist.
+
+## 🌟 Live Demo
+
+https://portfolio-five-zeta-n5x4y99rv0.vercel.app/
+
+---
+
+## 👨‍💻 About Me
+
+I'm **Moheb Adel**, an emerging AI Consultant passionate about:
+
+- Generative AI
+- Agentic AI
+- Microsoft Copilot
+- Azure AI
+- AI Transformation
+- Enterprise Solutions
+
+I enjoy transforming business challenges into AI-powered solutions that create measurable impact.
+
+---
+
+## 🏅 Certifications
+
+- AB-100 – Agentic AI Business Solutions Architect
+- AI-103 – Azure AI & Agentic Developer
+- AI-102 – Azure AI Engineer Associate
+- AB-731 – AI Transformation Champion
+- AI-900 – Azure AI Fundamentals
+- AZ-900 – Azure Fundamentals
+
+---
+
+## 🚀 Features
+
+✅ Modern Microsoft-style UI
+
+✅ Responsive Design
+
+✅ Framer Motion Animations
+
+✅ Typing Animation Hero Section
+
+✅ Glassmorphism UI
+
+✅ Dynamic Project Cards
+
+✅ Certifications Showcase
+
+✅ Skills Section
+
+✅ Resume Download
+
+✅ Dark Mode Design
+
+✅ Vercel Ready
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- Next.js 15
+- React
+- TypeScript
+- Tailwind CSS
+
+### Animations
+
+- Framer Motion
+- React Type Animation
+
+### Icons
+
+- Lucide React
+
+### Deployment
+
+- Vercel
+
+---
+
+## 📂 Project Structure
+
+```bash
+portfolio/
+│
+├── public/
+│   ├── me.png
+│   └── Moheb_Adel_Resume.pdf
+│
+├── app/
+│   ├── page.tsx
+│   ├── layout.tsx
+│   └── globals.css
+│
+├── components/
+│
+├── tailwind.config.ts
+├── next.config.ts
+└── package.json
+```
+
+---
+
+## 💼 Featured Projects
+
+### 🎥 AI Avatar Presenter
+
+Create AI-powered avatar videos from PowerPoint presentations using Azure AI Services.
+
+**Technologies**
+
+- Azure AI Speech
+- Avatar API
+- FastAPI
+- PowerPoint Integration
+
+---
+
+### 🔊 AI Speech Assistant
+
+Convert text into natural-sounding speech using Azure Cognitive Services.
+
+**Technologies**
+
+- FastAPI
+- Azure Speech Service
+- Python
+
+---
+
+### 🤖 Microsoft Copilot & Agentic AI Solutions
+
+Business solutions leveraging:
+
+- Microsoft Copilot
+- Azure OpenAI
+- Retrieval-Augmented Generation (RAG)
+- Prompt Flow
+- Agentic AI
+
+---
+
+## 🧠 Skills
+
+### AI & Copilot
+
+- Azure AI
+- Azure OpenAI
+- Microsoft Copilot
+- Agentic AI
+- RAG
+- Prompt Flow
+
+### Development
+
+- Python
+- FastAPI
+- Node.js
+- Git
+- GitHub
+
+### Business & Consulting
+
+- Business Analysis
+- AI Transformation
+- Customer Success
+- Stakeholder Management
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/moheb2002/portfolio.git
+```
+
+Navigate to the project:
+
+```bash
+cd portfolio
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🚀 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+### Deploy on Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Push code to GitHub:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+git add .
+git commit -m "Initial Portfolio"
+git push origin main
+```
 
-## Deploy on Vercel
+Import the repository into Vercel and deploy.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# portfolio
+## 📄 Resume
+
+My latest resume is available directly from the portfolio:
+
+```bash
+/public/Moheb_Adel_Resume.pdf
+```
+
+---
+
+## 📫 Connect With Me
+
+### GitHub
+
+https://github.com/moheb2002
+
+### LinkedIn
+
+https://www.linkedin.com/in/moheb2002
+
+### Email
+
+mohebadel13@gmail.com
+---
+
+## ⭐ Future Enhancements
+
+- Blog Section
+- Project Details Pages
+- AI Chatbot Assistant
+- GitHub Stats Integration
+- Microsoft Certification Badge Gallery
+- Experience Timeline
+- Contact Form
+
+---
+
+## 📜 License
+
+This project is open source and available under the MIT License.
+
+---
+
+### Built with ❤️ by Moheb Adel
+
+**AI Consultant • Agentic AI Architect • Microsoft Copilot Specialist**
