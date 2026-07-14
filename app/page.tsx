@@ -5,14 +5,38 @@ import { GitBranch, MessageCircle, Download, Mail } from "lucide-react";
 import { TypeAnimation } from "react-type-animation";
 
 const certifications = [
-  "AB-100 Agentic AI Business Solutions Architect",
-  "AI-103 Azure AI & Agentic Developer",
-  "AI-102 Azure AI Engineer Associate",
-  "AB-731 AI Transformation Leader",
-  "AB-730 AI Business Professional",
-  "AB-900 Copilot Administration Fundamentals",
-  "AI-900 Azure AI Fundamentals",
-  "AZ-900 Azure Fundamentals",
+  {
+    name: "AB-100 Agentic AI Business Solutions Architect",
+    link: "https://learn.microsoft.com/api/credentials/share/en-us/MohebAdel-3100/6915664EF46D24C9?sharingId=F3D98A83A1B4F731",
+  },
+  {
+    name: "AI-103 Azure AI & Agentic Developer",
+    link: "https://learn.microsoft.com/api/credentials/share/en-us/MohebAdel-3100/D2F9226E2EBBB1C2?sharingId=F3D98A83A1B4F731",
+  },
+  {
+    name: "AI-102 Azure AI Engineer Associate",
+    link: "https://learn.microsoft.com/api/credentials/share/en-us/MohebAdel-3100/9238F5BF84FB9679?sharingId=F3D98A83A1B4F731",
+  },
+  {
+    name: "AB-731 AI Transformation Leader",
+    link: "https://learn.microsoft.com/api/credentials/share/en-us/MohebAdel-3100/ACE9AB4F6984528F?sharingId=F3D98A83A1B4F731",
+  },
+  {
+    name: "AB-730 AI Business Professional",
+    link: "https://learn.microsoft.com/api/credentials/share/en-us/MohebAdel-3100/7B7FF9377A1BDEF?sharingId=F3D98A83A1B4F731",
+  },
+  {
+    name: "AB-900 Copilot Administration Fundamentals",
+    link: "https://learn.microsoft.com/api/credentials/share/en-us/MohebAdel-3100/23CA11B037599D21?sharingId=F3D98A83A1B4F731",
+  },
+  {
+    name: "AI-900 Azure AI Fundamentals",
+    link: "https://learn.microsoft.com/api/credentials/share/en-us/MohebAdel-3100/21B097930E7D997D?sharingId=F3D98A83A1B4F731",
+  },
+  {
+    name: "AZ-900 Azure Fundamentals",
+    link: "https://learn.microsoft.com/api/credentials/share/en-us/MohebAdel-3100/166CC074CC43709A?sharingId=F3D98A83A1B4F731",
+  },
 ];
 
 const projects = [
@@ -162,21 +186,30 @@ export default function Portfolio() {
             Certifications
           </motion.h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {certifications.map(cert => (
-              <motion.div
-                key={cert}
-                whileHover={{
-                  scale: 1.05,
-                  y: -10,
-                }}
-                className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md p-6"
-              >
-                🏆 {cert}
-              </motion.div>
-            ))}
-          </div>
-        </section>
+<div className="grid md:grid-cols-3 gap-6">
+  {certifications.map((cert) => (
+    <motion.a
+      key={cert.name}
+      href={cert.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      whileHover={{
+        scale: 1.05,
+        y: -10,
+      }}
+      whileTap={{
+        scale: 0.98,
+      }}
+      className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md p-6 cursor-pointer hover:border-cyan-400"
+    >
+      <h3 className="text-xl font-semibold mb-3 text-cyan-300">{cert.name}</h3>
+      <p className="text-slate-300 text-sm">
+        View certification details on Microsoft Learn.
+      </p>
+    </motion.a>
+  ))}
+</div>
+</section>
 
         {/* PROJECTS */}
 
